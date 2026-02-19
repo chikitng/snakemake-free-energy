@@ -1,0 +1,37 @@
+[workspace]
+authors = ["Chi Kit Ng <C.K.Ng2@newcastle.ac.uk>", "Finlay Clark <finlay.clark@newcastle.ac.uk>"]
+channels = ["conda-forge", "bioconda"]
+name = "snakemake-free-energy"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+format = "ruff format scripts/"
+lint = "ruff check scripts/"
+install-hooks = "pre-commit install"
+run-hooks = "pre-commit run --all-files"
+
+[dependencies]
+python = ">=3.10"
+snakemake = "*"
+ruff = ">=0.1.0"
+pre-commit = ">=3.0"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+lint.select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes
+    "I",    # isort
+    "C4",   # flake8-comprehensions
+    "UP",   # pyupgrade
+]
+lint.ignore = [
+    "E501",  # line too long
+    "E203",  # whitespace before ':'
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["scripts"]

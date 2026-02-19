@@ -1,0 +1,16 @@
+# Example input file for the binding free energy workflow
+# This is a template showing the expected format for input data
+
+# File location: input/{target}/{ligand}.dat
+# Example: input/target_A/ligand_1.dat
+
+target: target_A
+ligand: ligand_1
+system: protein_ligand_complex
+date_prepared: 2024-02-19
+
+# Add your data fields here:
+# structure_file: /path/to/structure.pdb
+# temperature: 298.15
+# solvent_model: implicit
+# other_parameters: ...
