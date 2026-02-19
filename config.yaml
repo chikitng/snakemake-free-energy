@@ -1,0 +1,20 @@
+# Configuration file for Snakemake workflow
+# Customise parameters for your binding free energy calculations
+
+# Project metadata
+project_name: "Binding Free Energy Calculations"
+description: "Calculate binding free energies using separate components"
+
+# Target and ligand definitions
+# Each target can have multiple ligands
+targets:
+  target_A:
+    ligands: [ligand_1, ligand_2, ligand_3]
+  target_B:
+    ligands: [ligand_4, ligand_5]
+
+# Add any project-specific configuration here
+# For example:
+# calculation_method: "some_method"
+# temperature: 298.15  # in Kelvin
+# other_params: "values"
